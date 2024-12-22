@@ -47,6 +47,18 @@
             "default": "#FFFFFF"
           },
           {
+            "type": "color",
+            "id": "header_background",
+            "label": "t:settings_schema.colors.settings.header_background.label",
+            "default": "#00AC83"
+          },
+          {
+            "type": "color",
+            "id": "header_text",
+            "label": "t:settings_schema.colors.settings.header_text.label",
+            "default": "#FFFFFF"
+          },
+          {
             "type": "color_background",
             "id": "background_gradient",
             "label": "t:settings_schema.colors.settings.background_gradient.label",

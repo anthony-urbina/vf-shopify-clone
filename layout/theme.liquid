@@ -61,6 +61,8 @@
         {%- endif %}
         .color-{{ scheme.id }} {
           --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+          --header-background: {{ scheme.settings.header_background.red }},{{ scheme.settings.header_background.green }},{{ scheme.settings.header_background.blue }};
+          --header-foreground: {{ scheme.settings.header_text.red }},{{ scheme.settings.header_text.green }},{{ scheme.settings.header_text.blue }};
         {% if scheme.settings.background_gradient != empty %}
           --gradient-background: {{ scheme.settings.background_gradient }};
         {% else %}
