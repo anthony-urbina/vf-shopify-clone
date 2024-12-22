@@ -439,6 +439,25 @@
     endif
   endif
 %}
+<script>
+  const menuLinks = [
+    {%- for link in section.settings.menu.links -%}
+      {
+        "title": "{{ link.title | escape }}",
+        "url": "{{ link.url | escape }}",
+        "links": [
+          {%- for childlink in link.links -%}
+            {
+              "title": "{{ childlink.title | escape }}",
+              "url": "{{ childlink.url | escape }}"
+            }{%- unless forloop.last -%},{%- endunless -%}
+          {%- endfor -%}
+        ]
+      }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ];
+  console.log(menuLinks);
+</script>
 
 {% schema %}
 {

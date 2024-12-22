@@ -92,3 +92,8 @@
     {%- endfor -%}
   </ul>
 </nav>
+
+<script>
+  const menuLinks = {{ section.settings.menu.links | json }};
+  console.log('menuLinks',menuLinks);
+</script>
