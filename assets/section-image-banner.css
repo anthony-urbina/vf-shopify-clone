@@ -86,7 +86,7 @@
   }
 
   .banner--small:not(.banner--adapt) {
-    min-height: 42rem;
+    min-height: 44.75rem;
   }
 
   .banner--medium:not(.banner--adapt) {
@@ -385,7 +385,7 @@
 
 .banner::after,
 .banner__media::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   background: #000000;

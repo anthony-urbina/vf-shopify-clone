@@ -74,7 +74,7 @@
 
 {%- style -%}
   .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    padding: {{ section.settings.padding_top}}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
   }
 
   .section-header {
@@ -82,11 +82,6 @@
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
-    .section-header {
-      margin-bottom: {{ section.settings.margin_bottom }}px;
-    }
-  }
 
   @media screen and (min-width: 990px) {
     .header {
@@ -459,6 +454,13 @@
   console.log(menuLinks);
 </script>
 
+
+<script>
+  const sectionSettings = {{ section.settings | json }};
+  console.log('header - sectionSettings',sectionSettings);
+</script>
+
+
 {% schema %}
 {
   "name": "t:sections.header.name",
@@ -646,20 +648,20 @@
       "id": "padding_top",
       "min": 0,
       "max": 36,
-      "step": 4,
+      "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
-      "default": 20
+      "default": 15
     },
     {
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
       "max": 36,
-      "step": 4,
+      "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 20
+      "default": 15
     }
   ],
   "blocks": [
