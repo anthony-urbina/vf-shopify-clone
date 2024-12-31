@@ -18,7 +18,9 @@ product-recommendations:not(.is-accordion) .complementary-products__container {
 }
 
 .complementary-slide {
-  --shadow-padding-sides: calc((var(--shadow-horizontal-offset) + var(--shadow-blur-radius)) * var(--shadow-visible));
+  --shadow-padding-sides: calc(
+    (var(--shadow-horizontal-offset) + var(--shadow-blur-radius)) * var(--shadow-visible)
+  );
   --shadow-padding-sides-negative: calc(
     (var(--shadow-horizontal-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible)
   );
@@ -100,10 +102,6 @@ product-recommendations.is-accordion + .accordion {
 
 .complementary-products-contains-quick-add .underline-links-hover:hover a {
   text-decoration: initial;
-}
-
-.complementary-products-contains-quick-add .card__heading:hover a {
-  text-decoration: underline;
 }
 
 .complementary-products__container .card--card .card__inner .card__media {
